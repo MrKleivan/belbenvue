@@ -284,14 +284,14 @@ export const Seksjoner = ref([
                 ]
             },
             {
-                TotalPoeng: 0,
+                TotalPoeng: 9,
                 SeksjonTall: "VII",
                 Tittel: "With reference to the problems to which I am subject in working in groups:",
                 Spørsmål: [
                     {
                         letter: "a",
                         q: "I am apt to show my impatience with those who are obstructing progress",
-                        poeng: 0
+                        poeng: 9
                     },
                     {
                         letter: "b",
