@@ -1,10 +1,78 @@
 export const Roller = [
-    {name: "cw", fullName: "Company Worker", typicalFeatures: "Konservativ, pliktoppfyllende, forutsigbar", positiveQualities: "Organiseringsevne, praktisk sunn fornuft, hardtarbeidende, selvdisiplinert", allowableWeaknesses: "Mangel på fleksibilitet, Uresponsiv mot uprøvde ideer", letters: ["g","a","h","d","b","f","e"], points: [], total: 0},
-    {name: "cp", fullName: "Chairperson", typicalFeatures: "Rolig, Selvsikker, kontrollert", positiveQualities: "En evne til å behandle og ønske velkommen alle potensielle bidrag basert på deres meritter, sterk følelse av objektivitet", allowableWeaknesses: "Ikke mer enn vanlig når det gjelder intellekt eller kreativ evne", letters: ["d","b","a","h","f","c","g"], points: [], total: 0},
-    {name: "sh", fullName: "Shaper", typicalFeatures: "Høyt strammet, utadvendt, dynamisk", positiveQualities: "Drivkraft og en beredskap til å utfordre treghet, ineffektivitet, selvtilfredshet eller selvbedrag", allowableWeaknesses: "Tilbøyelighet til provokasjon, irritabilitet og utålmodighet", letters: "fecbdga", points: [], total: 0},
-    {name: "pl", fullName: "Plant", typicalFeatures: "Individualistisk. Alvorlig sinn, uortodoks", positiveQualities: "Genialitet, fantasi, intellekt, kunnskap", allowableWeaknesses: "Oppe i skyene, tilbøyelig til å overse praktiske detaljer eller protokoll", letters: "cgdehaf", points: [], total: 0},
-    {name: "ri", fullName: "Resource Investigator", typicalFeatures: "Ekstrovert, entusiastisk, nysgjerrig, kommunikativer", positiveQualities: "En evne til å kontakte mennesker, utforske alt nytt, en evne til å respondere på utfordringer", allowableWeaknesses: "Tilbøyelig til å miste interessen når initial fascinasjon har passert", letters: "acfgehd", points: [], total: 0},
-    {name: "me", fullName: "Monitor Evaluator", typicalFeatures: "Nykter, uemotonell, varsom", positiveQualities: "Dom, diskresjon, hardhodethet", allowableWeaknesses: "Mangler inspirasjon eller evne til å motivere andre", letters: "hdgcaeb", points: [], total: 0},
-    {name: "tw", fullName: "Team Worker", typicalFeatures: "Sosialt orientert, snarere mild, sensitiv", positiveQualities: "En evne til å respondere på mennesker og situasjoner, og å fremme teamånd", allowableWeaknesses: "Uavgjorthet i øyeblikk av krise", letters: "bfeacbh", points: [], total: 0},
-    {name: "cf", fullName: "Complete Finisher", typicalFeatures: "Nøyaktig, ordentlig, samvittighetsfull, engstelig", positiveQualities: "En evne til oppfølging", allowableWeaknesses: "En tendens til å bekymre seg om små 'ting', En motvilje mot å 'slippe taket'", letters: "ehbfgdc", points: [], total: 0},
+    {
+        name: "cw",
+        fullName: "Company Worker",
+        typicalFeatures: "Konservativ, pliktoppfyllende, forutsigbar",
+        positiveQualities: "Organiseringsevne, praktisk sunn fornuft, hardtarbeidende, selvdisiplinert",
+        allowableWeaknesses: "Mangel på fleksibilitet, Uresponsiv mot uprøvde ideer",
+        letters: "gahdbfe",
+        points: [],
+        total: 0
+    },
+    {
+        name: "cp",
+        fullName: "Chairperson",
+        typicalFeatures: "Rolig, Selvsikker, kontrollert",
+        positiveQualities: "En evne til å behandle og ønske velkommen alle potensielle bidrag basert på deres meritter, sterk følelse av objektivitet",
+        allowableWeaknesses: "Ikke mer enn vanlig når det gjelder intellekt eller kreativ evne",
+        letters: "dbahfcg",
+        points: [],
+        total: 0
+    },
+    {
+        name: "sh",
+        fullName: "Shaper",
+        typicalFeatures: "Høyt strammet, utadvendt, dynamisk",
+        positiveQualities: "Drivkraft og en beredskap til å utfordre treghet, ineffektivitet, selvtilfredshet eller selvbedrag",
+        allowableWeaknesses: "Tilbøyelighet til provokasjon, irritabilitet og utålmodighet",
+        letters: "fecbdga",
+        points: [],
+        total: 0
+    },
+    {
+        name: "pl",
+        fullName: "Plant",
+        typicalFeatures: "Individualistisk. Alvorlig sinn, uortodoks",
+        positiveQualities: "Genialitet, fantasi, intellekt, kunnskap",
+        allowableWeaknesses: "Oppe i skyene, tilbøyelig til å overse praktiske detaljer eller protokoll",
+        letters: "cgdehaf",
+        points: [],
+        total: 0
+    },
+    {
+        name: "ri",
+        fullName: "Resource Investigator",
+        typicalFeatures: "Ekstrovert, entusiastisk, nysgjerrig, kommunikativer", positiveQualities: "En evne til å kontakte mennesker, utforske alt nytt, en evne til å respondere på utfordringer", allowableWeaknesses: "Tilbøyelig til å miste interessen når initial fascinasjon har passert", letters: "acfgehd", points: [],
+        total: 0
+    },
+    {
+        name: "me",
+        fullName: "Monitor Evaluator",
+        typicalFeatures: "Nykter, uemotonell, varsom",
+        positiveQualities: "Dom, diskresjon, hardhodethet",
+        allowableWeaknesses: "Mangler inspirasjon eller evne til å motivere andre",
+        letters: "hdgcaeb",
+        points: [],
+        total: 0
+    },
+    {
+        name: "tw",
+        fullName: "Team Worker",
+        typicalFeatures: "Sosialt orientert, snarere mild, sensitiv",
+        positiveQualities: "En evne til å respondere på mennesker og situasjoner, og å fremme teamånd",
+        allowableWeaknesses: "Uavgjorthet i øyeblikk av krise",
+        letters: "bfeacbh",
+        points: [],
+        total: 0
+    },
+    {
+        name: "cf",
+        fullName: "Complete Finisher", 
+        typicalFeatures: "Nøyaktig, ordentlig, samvittighetsfull, engstelig",
+        positiveQualities: "En evne til oppfølging", 
+        allowableWeaknesses: "En tendens til å bekymre seg om små 'ting', En motvilje mot å 'slippe taket'",
+        letters: "ehbfgdc",
+        points: [],
+        total: 0
+    },
 ]
