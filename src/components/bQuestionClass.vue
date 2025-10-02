@@ -2,11 +2,13 @@
         // legg til ref
         import { ref } from 'vue';
         import { Seksjoner } from './sporsmol';
+        import {Roller} from "./roller.js";
 
         const points = ref([0,0,0,0,0,0,0]);
 
         const isFinished = ref(false);
         const seksjoner = Seksjoner;
+        const thewinners = ref();
 
         function getTotals(spørsmArr, intOrArray) {
             const tPs = [];
@@ -59,14 +61,15 @@
 
 
         const getResult = () =>  {
-            let chech = confirm();
-            if(!chech)
-            {
-                return;
-            }
+            //let chech = confirm();
+            //if(!chech)
+            //{
+            //    return;
+            //}
             
             const letterPoints = [];
 
+            
             for(let i = 0; i < seksjoner.value.length; i++)
             {
                 const letterPoint = [];
@@ -77,37 +80,33 @@
                 letterPoints.push(letterPoint);
             }
 
-            const obj = [
-                {name: "cw", letters: ["g","a","h","d","b","f","e"], points: [], total: 0},
-                {name: "cp", letters: ["d","b","a","h","f","c","g"], points: [], total: 0},
-                {name: "sh", letters: "fecbdga", points: [], total: 0},
-                {name: "pl", letters: "cgdehaf", points: [], total: 0},
-                {name: "ri", letters: "acfgehd", points: [], total: 0},
-            ]
+
+            var roller = Roller;
             
-            for(let i = 0; i < obj.length; i++)
+            for(let i = 0; i < roller.length; i++)
             {
-                for(let j = 0; j < obj[i].letters.length; j++)
+                for(let j = 0; j < roller[i].letters.length; j++)
                 {
-                    let objSelect = seksjoner.value[j].Spørsmål.find(e => e.letter == obj[i].letters[j]);
-                    obj[i].points.push(objSelect.poeng);
+                    let objSelect = seksjoner.value[j].Spørsmål.find(e => e.letter == roller[i].letters[j]);
+                    roller[i].points.push(objSelect.poeng);
                 }
-                for(let j = 0; j < obj[i].points.length; j++)
+                for(let j = 0; j < roller[i].points.length; j++)
                 {
-                    obj[i].total += obj[i].points[j];
+                    roller[i].total += roller[i].points[j];
                 }
 
             }
 
-            console.log(obj);
-            let vinner = obj.sort((a, b) => b.total - a.total);
+            console.log(roller);
+            let vinner = roller.sort((a, b) => b.total - a.total);
 
-            let thewinners = vinner.filter(n => n.total == vinner[0].total)
+            thewinners.value = vinner.filter(n => n.total == vinner[0].total)
 
-            console.log(thewinners);
-            console.log(vinner);
+          
+            //console.log(thewinners.value);
+            //console.log(vinner);
 
-            console.log(vinner[0].name);
+            //console.log(vinner[0].name);
 
         }
 
@@ -137,7 +136,22 @@
     </div>
     <div v-if="isFinished">
         <button @click="getResult">Lever resultat</button>
+      
+        <div id="finished" v-if="thewinners" v-for="vinner in thewinners">
+          
+          <br>            
+            {{vinner.name}}
+          <br>
+            {{vinner.fullName}}
+          <br>
+            {{vinner.typicalFeatures}}
+          <br>
+            {{vinner.positiveQualities}}
+          <br>
+            {{vinner.allowableWeaknesses}}
+        </div>
     </div>
+  
 </template>
 
 <style scoped>
