@@ -2,7 +2,7 @@ import { ref } from "vue";
 
 export const Seksjoner = ref([
     {
-        TotalPoeng: 0,
+        TotalPoeng: 10,
         SeksjonTall: "I",
         Tittel: "Hva jeg tror jeg kan bidra med til et team:",
         Spørsmål: [
@@ -24,12 +24,12 @@ export const Seksjoner = ref([
             {
                 letter: "d",
                 q: "Min evne ligger i å kunne trekke folk frem når jeg oppdager at de har noe verdifullt å bidra med til gruppens mål",
-                poeng: 0
+                poeng: 1
             },
             {
                 letter: "e",
                 q: "Min evne til å følge opp har mye å gjøre med min personlige effektivitet",
-                poeng: 0
+                poeng: 3
             },
             {
                 letter: "f",
@@ -39,24 +39,24 @@ export const Seksjoner = ref([
             {
                 letter: "g",
                 q: "Jeg kan vanligvis fornemme hva som er realistisk og sannsynlig å fungere",
-                poeng: 0
+                poeng: 3
             },
             {
                 letter: "h",
                 q: "Jeg kan tilby en begrunnet sak for alternative handlingsforløp uten å introdusere skjevhet eller fordommer",
-                poeng: 0
+                poeng: 3
             }
         ]
     },
     {
-        TotalPoeng: 0,
+        TotalPoeng: 10,
         SeksjonTall: "II",
         Tittel: "Hvis jeg har en mulig svakhet i teamarbeid, kan det være at:",
         Spørsmål: [
             {
                 letter: "a",
                 q: "Jeg er ikke komfortabel med mindre møter er godt strukturerte og kontrollert og generelt godt gjennomført",
-                poeng: 0
+                poeng: 5
             },
             {
                 letter: "b",
@@ -66,7 +66,7 @@ export const Seksjoner = ref([
             {
                 letter: "c",
                 q: "Jeg har en tendens til å snakke for mye når gruppen kommer inn på nye ideer",
-                poeng: 0
+                poeng: 5
             },
             {
                 letter: "d",
@@ -96,14 +96,14 @@ export const Seksjoner = ref([
         ]
     },
     {
-        TotalPoeng: 0,
+        TotalPoeng: 10,
         SeksjonTall: "III",
         Tittel: "Når jeg er involvert i et prosjekt med andre mennesker:",
         Spørsmål: [
             {
                 letter: "a",
                 q: "Jeg har en evne til å påvirke mennesker uten å presse dem",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "b",
@@ -143,14 +143,14 @@ export const Seksjoner = ref([
         ]
     },
     {
-        TotalPoeng: 0,
+        TotalPoeng: 10,
         SeksjonTall: "IV",
         Tittel: "Min karakteristiske tilnærming til gruppearbeid er at:",
         Spørsmål: [
             {
                 letter: "a",
                 q: "Jeg har en stille interesse i å bli bedre kjent med kolleger",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "b",
@@ -190,7 +190,7 @@ export const Seksjoner = ref([
         ]
     },
     {
-        TotalPoeng: 0,
+        TotalPoeng: 10,
         SeksjonTall: "V",
         Tittel: "Jeg får tilfredsstillelse i en jobb fordi:",
         Spørsmål: [
@@ -232,12 +232,12 @@ export const Seksjoner = ref([
             {
                 letter: "h",
                 q: "Jeg liker å finne et felt som strekker min fantasi",
-                poeng: 0
+                poeng: 10
             }
         ]
     },
     {
-        TotalPoeng: 0,
+        TotalPoeng: 10,
         SeksjonTall: "VI",
         Tittel: "Hvis jeg plutselig får en vanskelig oppgave med begrenset tid og ukjente mennesker:",
         Spørsmål: [
@@ -249,7 +249,7 @@ export const Seksjoner = ref([
             {
                 letter: "b",
                 q: "Jeg ville være klar til å jobbe med personen som viste den mest positive tilnærmingen",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "c",
@@ -284,19 +284,19 @@ export const Seksjoner = ref([
         ]
     },
     {
-        TotalPoeng: 0,
+        TotalPoeng: 9,
         SeksjonTall: "VII",
         Tittel: "Med henvisning til problemene jeg er utsatt for i arbeidet i grupper:",
         Spørsmål: [
             {
                 letter: "a",
                 q: "Jeg har en tendens til å vise min utålmodighet med de som blokkerer fremgangen",
-                poeng: 0
+                poeng: 4
             },
             {
                 letter: "b",
                 q: "Andre kan kritisere meg for å være for analytisk og for lite intuitiv",
-                poeng: 0
+                poeng: 5
             },
             {
                 letter: "c",

@@ -4,11 +4,32 @@
         import { Seksjoner } from './sporsmol';
         import {Roller} from "./roller.js";
 
-        const points = ref([0,0,0,0,0,0,0]);
-
         const isFinished = ref(false);
         const seksjoner = Seksjoner;
-        const thewinners = ref();
+        const thewinners = ref([]);
+
+        function addResult(){
+            let theWinnerNames = `
+                ${thewinners.value[0].name},
+                ${thewinners.value[1].name},
+                ${thewinners.value[2].name},
+            `;
+            let theWinnerPoints = `
+                ${thewinners.value[0].total},
+                ${thewinners.value[1].total},
+                ${thewinners.value[2].total},
+            `;
+            let result = fetch("https://localhost:7134", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    scores: theWinnerPoints,
+                    names: theWinnerNames
+                })
+            });
+        }
 
         function getTotals(spørsmArr, intOrArray) {
             const tPs = [];
@@ -94,20 +115,17 @@
                 {
                     roller[i].total += roller[i].points[j];
                 }
-
             }
 
-            console.log(roller);
+            //console.log(roller);
             let vinner = roller.sort((a, b) => b.total - a.total);
 
-            thewinners.value = vinner.filter(n => n.total == vinner[0].total)
+            //thewinners.value = vinner.filter(n => n.total == vinner[0].total);
 
-          
-            //console.log(thewinners.value);
-            //console.log(vinner);
-
-            //console.log(vinner[0].name);
-
+            for(let i = 0; i < 3; i++){
+                thewinners.value.push(vinner[i]);
+            }
+            console.log(thewinners.value);
         }
 
 
@@ -149,8 +167,13 @@
             {{vinner.positiveQualities}}
           <br>
             {{vinner.allowableWeaknesses}}
+
+          <br/>
         </div>
-    </div>
+        <button @click="addResult">Klikk for å lagre resultatet ditt!</button>
+          <br/>
+          <button>Prøv igjen?</button>
+        </div>
   
 </template>
 
@@ -172,7 +195,7 @@
         padding: 1px 0;
     }
     .tabell_1_spørsmålOppsett > div > div, .tabell_1 > div:first-child {
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(216, 212, 212);
         padding: 10px 20px;
     }
     .tabell_1_spørsmålOppsett > div > div:last-child {
