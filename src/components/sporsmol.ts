@@ -34,7 +34,7 @@ export const Seksjoner = ref([
             {
                 letter: "f",
                 q: "Jeg er klar til å møte midlertidig upopularitet hvis det leder til verdifulle resultater til slutt",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "g",
@@ -86,7 +86,7 @@ export const Seksjoner = ref([
             {
                 letter: "g",
                 q: "Jeg har en tendens til å bli for oppslukt i ideer som dukker opp for meg og dermed miste oversikten over hva som skjer",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "h",
@@ -133,7 +133,7 @@ export const Seksjoner = ref([
             {
                 letter: "g",
                 q: "Jeg tror min evne til dømmekraft kan hjelpe til med å bringe om de rette beslutningene",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "h",
@@ -180,7 +180,7 @@ export const Seksjoner = ref([
             {
                 letter: "g",
                 q: "Jeg er klar til å bruke kontakter utenfor gruppen selv",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "h",
@@ -244,7 +244,7 @@ export const Seksjoner = ref([
             {
                 letter: "a",
                 q: "Jeg ville føle meg fristet til å trekke meg tilbake i et hjørne for å finne en vei ut av dødvannet før jeg utvikler en linje",
-                poeng: 0
+                poeng: 10
             },
             {
                 letter: "b",
@@ -291,7 +291,11 @@ export const Seksjoner = ref([
             {
                 letter: "a",
                 q: "Jeg har en tendens til å vise min utålmodighet med de som blokkerer fremgangen",
+<<<<<<< Updated upstream
                 poeng: 4
+=======
+                poeng: 9
+>>>>>>> Stashed changes
             },
             {
                 letter: "b",
