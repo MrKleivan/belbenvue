@@ -292,7 +292,11 @@ export const Seksjoner = ref([
                 letter: "a",
                 q: "Jeg har en tendens til å vise min utålmodighet med de som blokkerer fremgangen",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 poeng: 4
+=======
+                poeng: 9
+>>>>>>> Stashed changes
 =======
                 poeng: 9
 >>>>>>> Stashed changes
